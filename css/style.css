@@ -1,5 +1,7 @@
 /* variables */
 :root {
+  --primario: #ffc107;
+  --secundario: #0097a7;
   --oscuro: #212121;
 }
 /* /variables */
@@ -20,6 +22,11 @@ body {
   min-height: 100%;
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   font-size: 1.6rem;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
 .site-header {
@@ -56,3 +63,46 @@ body {
     margin-bottom: 0;
   }
 }
+
+/* principal */
+
+.hero {
+  height: 45rem;
+  background-image: url(../img/hero.jpg);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container-hero {
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.container-hero i {
+  font-size: 5rem;
+  color: var(--primario);
+}
+.button {
+  background-color: var(--secundario);
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1rem 5rem;
+  display: inline-block;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.2rem;
+  border-radius: 0.5rem;
+}
+/* /principal */
